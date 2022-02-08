@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+ 	
+ 	function mostra (frase) {
+
+ 		document.write(frase);
+ 		pulaLinha();
+
+	}
+
+	
+	var numeroPensado = Math.round(Math.random()* 10);
+	
+
+	var tentatvas = 1
+
+	while(tentatvas <= 3) {
+
+		var chute = parseInt(prompt("Digite o seu chute de 0 a 10! "));
+
+		if (chute == numeroPensado) {
+
+			mostra("você Acertou!");
+			break;
+
+		} else {
+
+			mostra("Você ERROU, tente novamente"); 
+		}
+
+		tentatvas++
+	}
+		
+
+</script>

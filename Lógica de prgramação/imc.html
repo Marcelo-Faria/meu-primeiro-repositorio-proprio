@@ -1,0 +1,59 @@
+<meta charset="UTF-8">
+<script>
+
+	function pulaLinha () {
+
+		document.write("<br>");
+
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+
+	}
+
+	function calculaImc( altura, peso) {
+
+		return peso / (altura*altura)
+
+	}
+
+		var nome = prompt ("Qual é o seu nome?");
+
+		var pesoIdenticado = prompt (nome + ", qual é o seu peso?");
+
+		var alturaIdentificada = prompt(nome + ", qual é a sua altura?");
+
+		var resultado = calculaImc(alturaIdentificada, pesoIdenticado);
+
+		if (resultado < 18.5) {
+
+			mostra("Você está abaixo do peso.");
+
+		}
+
+		if (resultado >= 18.6 && resultado <= 24.9) {
+
+			mostra("Segundo a OMS, seu peso está normal.");
+
+		}
+
+		if (resultado >=25 && resultado < 29.9 ) {
+
+			mostra("Você está com sobrepeso.");
+
+		}
+
+		if (resultado >=30 && resultado < 34.9) {
+
+			mostra("Você está obeso.");
+
+		}
+
+
+		mostra(resultado)
+
+
+</script>

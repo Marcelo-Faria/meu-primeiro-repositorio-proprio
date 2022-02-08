@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Aperte aqui</button>
+
+<script>
+	
+	var numeroPensado = Math.round(Math.random()*10);
+
+	var input = document.querySelector("input");		
+	input.focus();
+
+	function mostraResultado() {
+	
+		if( input.value == numeroPensado) {	
+
+			alert("Parabéns, você ACERTOU!!!");
+
+		} else {
+
+			alert("Você ERROU, tente novamente!");
+
+		}	
+			input.value ="";
+			input.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = mostraResultado 
+
+</script>
